@@ -1,4 +1,4 @@
-# tdd-vue-v2
+# Vue Component Testing Example
 
 ## Project setup
 ```
