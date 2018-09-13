@@ -1,29 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <TodoList></TodoList>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import TodoItem from "@/components/TodoItem.vue";
+import TodoList from "@/containers/TodoList.vue";
 
 export default Vue.extend({
   name: "app",
   components: {
-    HelloWorld
+    TodoItem,
+    TodoList
+  },
+  data: () => ({
+    title: "test-title",
+    isCompleted: false
+  }),
+  methods: {
+    log: () => {
+      console.log("click");
+    }
   }
 });
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
